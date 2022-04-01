@@ -2,9 +2,9 @@
 require_once './vendor/autoload.php';
 
 // Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-    ->setUsername('alexmm1996@gmail.com')
-    ->setPassword('101996am');
+$transport = (new Swift_SmtpTransport('smtp.gmail.com', 587, 'TLS'))
+    ->setUsername('alexdoerandom@gmail.com')
+    ->setPassword('nozuvemdpbddzpoi');
 
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
@@ -37,7 +37,7 @@ function sendVerificationEmail($userEmail, $token)
     <body>
       <div class="wrapper">
         <p>Thank you for signing up on our site. Please click on the link below to verify your account:.</p>
-        <a href="http://localhost/cwa/verify-user/verify_email.php?token=' . $token . '">Verify Email!</a>
+        <a href="http://localhost/ATWProjeto/verify-email.php?token=' . $token . '">Verify Email!</a>
       </div>
     </body>
 
